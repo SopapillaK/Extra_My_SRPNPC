@@ -35,6 +35,15 @@ public class StandardHealth : MonoBehaviour, IHealth
             Die();
     }
 
+    public void HealHP()
+    {
+
+        //StartCoroutine(InvunlerabilityTimer());
+        currentHealth += 10;
+
+        OnHPPctChanged(CurrentHpPct);
+    }
+
     private void Die()
     {
         OnDied();

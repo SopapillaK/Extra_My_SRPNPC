@@ -48,4 +48,13 @@ public class NumerOfHitsHealth : MonoBehaviour, IHealth
         yield return new WaitForSeconds(invulnerabilityTimeAfterEachHit);
         canTakeDamage = true;
     }
+
+    public void HealHP()
+    {
+
+        //StartCoroutine(InvunlerabilityTimer());
+        hitsRemaining++;
+
+        OnHPPctChanged(CurrentHpPct);
+    }
 }
